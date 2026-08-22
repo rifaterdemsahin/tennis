@@ -15,6 +15,7 @@ It is **not** a club. Contribute: [fork the repo](https://github.com/rifaterdems
 
 | Page | Purpose |
 |------|---------|
+| `enter.html` | How to enter: council sign, LTA search, Codelocks keypad |
 | `learn.html` | Starter guide, gate keypad, YouTube basics |
 | `shop.html` | Amazon UK kit list (racket, balls, shoes) |
 | `parking.html` | Petersfield Mansions CB1 1BB, ring 50, walk to Christ's Pieces |

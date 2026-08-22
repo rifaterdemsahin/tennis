@@ -10,7 +10,8 @@ const LANGS = [
 const T = {
   en: {
     nav_home: "Home", nav_learn: "Learn", nav_courts: "Courts", nav_book: "Book",
-    nav_players: "Players", nav_calendar: "Calendar", nav_shop: "Shop", nav_park: "Parking", nav_kids: "Kids",
+    nav_players: "Players", nav_calendar: "Calendar", nav_shop: "Shop", nav_park: "Parking", nav_kids: "Kids", nav_enter: "Entry",
+    search_ph: "Search this site",
     skip: "Skip to content",
     translate: "Translate",
     repo_note: "💻 This site is open source: <a href=\"https://github.com/rifaterdemsahin/tennis\">github.com/rifaterdemsahin/tennis</a>. Fork it, improve a page, and send a pull request — the community is welcome.",
@@ -189,6 +190,27 @@ const T = {
     kids_b2: "Water, a snack, a cap. Same walk: ~15 min from Petersfield after ring 50.",
     kids_b3: "Say in the WhatsApp group the night before if children are coming, so we can plan a court.",
     kids_foot: "Kids watch, practice with us, collect balls, and talk — tennis day is a family morning.",
+    enter_eyebrow: "City council + ClubSpark lock",
+    enter_h1: "How to enter the courts 🔐",
+    enter_lede: "Christ's Pieces is owned by <strong>Cambridge City Council</strong>. Book at <strong>lta.org.uk/book</strong> — search <strong>Christ's Pieces</strong> — or scan the QR on the fence. Then unlock the Codelocks keypad with <strong>*</strong> and your Play Tennis PIN.",
+    enter_src: "Photos and notes from the group how-to-enter pack.",
+    enter_sign_h: "1. Follow the sign on the gate",
+    enter_sign_p: "The council poster says: visit <a href=\"https://www.lta.org.uk/play/book-a-tennis-court/\">lta.org.uk/book</a> and <strong>search Christ's Pieces</strong>, or scan the QR. Courts are Cambridge City Council; LTA Park Tennis Court Refurbishment funded the surface.",
+    enter_lock_h: "2. Use the electronic lock",
+    enter_lock_p: "Silver <strong>Codelocks</strong> keypad on the green mesh gate, under a rain hood. Numbers 0–9, <strong>*</strong> and <strong>#</strong>, plus a lever handle. This is LTA SmartAccess / ClubSpark — not a padlock.",
+    enter_steps_h: "3. Unlock",
+    enter_s1: "Open Play Tennis and copy the PIN for this booking (not published here).",
+    enter_s2: "Press a key if the pad is dark (wake it).",
+    enter_s3: "Type <strong>*</strong> first, then the PIN, no space — shape only: <span class=\"pin-example\">*XXXXXX</span>.",
+    enter_s4: "Turn the handle and push the gate. Let it latch behind you.",
+    enter_s5: "The PIN works about <strong>10–15 minutes before</strong> start until shortly after the end. Outside that window it will refuse.",
+    enter_exit_h: "4. Exit",
+    enter_exit_p: "You do not need a code to leave. The inside handle opens the gate. It locks when it closes. Do not prop it for strangers.",
+    enter_fail_h: "If it will not open",
+    enter_f1: "Confirm date, court, and that you are inside the booking window.",
+    enter_f2: "Star first. Wrong PIN three times can lock the pad for a minute.",
+    enter_f3: "If you booked on the spot, wait a few minutes for the code to go live.",
+    enter_foot: "Entry guide for Christ's Pieces · Cambridge City Council · Codelocks keypad.",
 
     book_eyebrow: "📱 LTA Play Tennis / ClubSpark",
     book_h1: "Book a court in the Play Tennis app",
@@ -263,7 +285,8 @@ const T = {
 
 T.tr = {
   nav_home: "Ana sayfa", nav_learn: "Öğren", nav_courts: "Kortlar", nav_book: "Rezerve",
-  nav_players: "Oyuncular", nav_calendar: "Takvim", nav_shop: "Alışveriş", nav_park: "Park", nav_kids: "Çocuklar",
+  nav_players: "Oyuncular", nav_calendar: "Takvim", nav_shop: "Alışveriş", nav_park: "Park", nav_kids: "Çocuklar", nav_enter: "Giriş",
+  search_ph: "Sitede ara",
   skip: "İçeriğe geç", translate: "Çevir",
   repo_note: "💻 Bu site açık kaynak: <a href=\"https://github.com/rifaterdemsahin/tennis\">github.com/rifaterdemsahin/tennis</a>. Fork’la, bir sayfayı iyileştir, pull request gönder — topluluk davetlidir.",
   home_eyebrow: "Cambridge · yeni başlayanlar hoş geldiniz",
@@ -438,6 +461,27 @@ T.tr = {
   kids_b2: "Su, atıştırmalık, şapka. Aynı yürüyüş: 50’ye bastıktan sonra Petersfield’ten ~15 dk.",
   kids_b3: "Çocuk gelecekse bir gece önce WhatsApp’ta söyleyin, kort planlayalım.",
   kids_foot: "Çocuklar izler, bizimle çalışır, top toplar, konuşur — tenis günü aile sabahıdır.",
+  enter_eyebrow: "Belediye + ClubSpark kilit",
+  enter_h1: "Korta nasıl girilir 🔐",
+  enter_lede: "Christ's Pieces <strong>Cambridge Belediyesi</strong>’ne ait. <strong>lta.org.uk/book</strong> adresinde <strong>Christ's Pieces</strong> ara veya filedeki QR’ı tara. Sonra Codelocks tuş takımına <strong>*</strong> ve Play Tennis PIN’ini gir.",
+  enter_src: "Fotoğraflar grubun how-to-enter paketinden.",
+  enter_sign_h: "1. Kapıdaki tabelayı izle",
+  enter_sign_p: "Belediye afişi: <a href=\"https://www.lta.org.uk/play/book-a-tennis-court/\">lta.org.uk/book</a> ve <strong>Christ's Pieces ara</strong>, veya QR tara.",
+  enter_lock_h: "2. Elektronik kilidi kullan",
+  enter_lock_p: "Yeşil file kapıdaki gümüş <strong>Codelocks</strong> tuş takımı, yağmur siperi altında. 0–9, <strong>*</strong> ve <strong>#</strong>, kol. LTA SmartAccess / ClubSpark — asma kilit değil.",
+  enter_steps_h: "3. Aç",
+  enter_s1: "Play Tennis’ten bu rezervasyonun PIN’ini kopyala (burada yok).",
+  enter_s2: "Ekran karanlıksa bir tuşa bas (uyandır).",
+  enter_s3: "Önce <strong>*</strong>, sonra PIN, boşluksuz — biçim: <span class=\"pin-example\">*XXXXXX</span>.",
+  enter_s4: "Kolu çevir, kapıyı it. Arkandan kilitlensin.",
+  enter_s5: "PIN başlangıçtan <strong>10–15 dk önce</strong> çalışır, bitişten biraz sonraya kadar. Dışında açılmaz.",
+  enter_exit_h: "4. Çıkış",
+  enter_exit_p: "Çıkmak için kod gerekmez. İçerideki kol açar. Kapanınca kilitlenir. Yabancılara açık tutma.",
+  enter_fail_h: "Açılmazsa",
+  enter_f1: "Tarih, kort ve rezervasyon penceresini kontrol et.",
+  enter_f2: "Önce yıldız. Üç yanlış PIN tuş takımını bir dakikalığına kilitleyebilir.",
+  enter_f3: "Yerinde ayırttıysan kodun düşmesi birkaç dakika sürebilir.",
+  enter_foot: "Christ's Pieces giriş rehberi · Cambridge Belediyesi · Codelocks.",
   book_eyebrow: "📱 LTA Play Tennis / ClubSpark",
   book_h1: "Play Tennis uygulamasından kort ayırt",
   book_lede: "Kullandığımız uygulama bu. <strong>Christ's Pieces</strong> ara, 45 dakikalık seans seç, <strong>£3</strong> öde. Cumartesileri Erdem karşılıyor.",
@@ -511,7 +555,7 @@ function copyFromEn(over) {
 
 T.es = copyFromEn({
   nav_home: "Inicio", nav_learn: "Aprender", nav_courts: "Pistas", nav_book: "Reservar",
-  nav_players: "Jugadores", nav_calendar: "Calendario", nav_shop: "Comprar", nav_park: "Parking", nav_kids: "Niños",
+  nav_players: "Jugadores", nav_calendar: "Calendario", nav_shop: "Comprar", nav_park: "Parking", nav_kids: "Niños", nav_enter: "Entrada", search_ph: "Buscar",
   skip: "Saltar al contenido", translate: "Traducir",
   home_eyebrow: "Cambridge · bienvenidos principiantes",
   home_h1: "Golpea, ríe, aprende y luego el té. ☕",
@@ -659,7 +703,7 @@ T.es = copyFromEn({
 
 T.de = copyFromEn({
   nav_home: "Start", nav_learn: "Lernen", nav_courts: "Plätze", nav_book: "Buchen",
-  nav_players: "Spieler", nav_calendar: "Kalender", nav_shop: "Shop", nav_park: "Parken", nav_kids: "Kinder",
+  nav_players: "Spieler", nav_calendar: "Kalender", nav_shop: "Shop", nav_park: "Parken", nav_kids: "Kinder", nav_enter: "Zugang", search_ph: "Suche",
   skip: "Zum Inhalt", translate: "Übersetzen",
   home_eyebrow: "Cambridge · Anfänger willkommen",
   home_h1: "Schlagen, lachen, lernen, dann Tee. ☕",
@@ -807,7 +851,7 @@ T.de = copyFromEn({
 
 T.it = copyFromEn({
   nav_home: "Home", nav_learn: "Impara", nav_courts: "Campi", nav_book: "Prenota",
-  nav_players: "Giocatori", nav_calendar: "Calendario", nav_shop: "Shop", nav_park: "Parcheggio", nav_kids: "Bambini",
+  nav_players: "Giocatori", nav_calendar: "Calendario", nav_shop: "Shop", nav_park: "Parcheggio", nav_kids: "Bambini", nav_enter: "Ingresso", search_ph: "Cerca",
   skip: "Vai al contenuto", translate: "Traduci",
   home_eyebrow: "Cambridge · principianti benvenuti",
   home_h1: "Colpisci, ridi, impara, poi il tè. ☕",
@@ -955,7 +999,7 @@ T.it = copyFromEn({
 
 T.zh = copyFromEn({
   nav_home: "首页", nav_learn: "学习", nav_courts: "球场", nav_book: "预订",
-  nav_players: "球友", nav_calendar: "日历", nav_shop: "购物", nav_park: "停车", nav_kids: "孩子",
+  nav_players: "球友", nav_calendar: "日历", nav_shop: "购物", nav_park: "停车", nav_kids: "孩子", nav_enter: "入场", search_ph: "搜索本站",
   skip: "跳到正文", translate: "翻译",
   home_eyebrow: "剑桥 · 欢迎初学者",
   home_h1: "打球、欢笑、学习，然后喝茶。☕",
@@ -1129,6 +1173,7 @@ function applyI18n(lang) {
   document.querySelectorAll(".langbar button").forEach((btn) => {
     btn.setAttribute("aria-pressed", btn.dataset.lang === lang ? "true" : "false");
   });
+  applyPlaceholders(lang);
   if (typeof window.renderCalendar === "function") window.renderCalendar();
 }
 
@@ -1168,7 +1213,57 @@ function mountLangBar() {
     });
     bar.appendChild(b);
   });
+  const searchWrap = document.createElement("div");
+  searchWrap.className = "site-search";
+  searchWrap.innerHTML = `<input type="search" data-i18n-placeholder="search_ph" placeholder="Search this site" aria-label="Search this site"><div class="hits" role="listbox"></div>`;
+  bar.appendChild(searchWrap);
   document.body.insertBefore(bar, document.body.firstChild);
+  wireSearch(searchWrap);
+}
+
+const SITE_PAGES = [
+  { href: "index.html", title: "Home", keys: "home tennis cambridge learners tea" },
+  { href: "enter.html", title: "Entry & lock", keys: "enter gate lock keypad star pin council qr lta.org.uk/book christ's pieces search codelocks smartaccess clubspark" },
+  { href: "learn.html", title: "Learn", keys: "starter guide shots scoring doubles videos" },
+  { href: "courts.html", title: "Courts", keys: "christ's pieces jesus green st ives lammas" },
+  { href: "book.html", title: "Book", keys: "play tennis app £3 booking pin" },
+  { href: "parking.html", title: "Parking", keys: "petersfield mansions cb1 1bb ring 50 walk" },
+  { href: "kids.html", title: "Kids", keys: "children watch practice balls talk" },
+  { href: "shop.html", title: "Shop", keys: "amazon racket balls shoes" },
+  { href: "players.html", title: "Players", keys: "roles erdem saturday" },
+  { href: "calendar.html", title: "Calendar", keys: "saturday weekday joker" }
+];
+
+function wireSearch(wrap) {
+  const input = wrap.querySelector("input");
+  const hits = wrap.querySelector(".hits");
+  const render = () => {
+    const q = input.value.trim().toLowerCase();
+    const lang = document.documentElement.lang || "en";
+    const navKey = { "index.html": "nav_home", "enter.html": "nav_enter", "learn.html": "nav_learn", "courts.html": "nav_courts", "book.html": "nav_book", "parking.html": "nav_park", "kids.html": "nav_kids", "shop.html": "nav_shop", "players.html": "nav_players", "calendar.html": "nav_calendar" };
+    const list = SITE_PAGES.filter((p) => {
+      if (!q) return true;
+      const label = (T[lang] && T[lang][navKey[p.href]]) || p.title;
+      return (p.title + " " + p.keys + " " + label).toLowerCase().includes(q);
+    }).slice(0, 8);
+    hits.innerHTML = list.length
+      ? list.map((p) => `<a href="${p.href}">${(T[lang] && T[lang][navKey[p.href]]) || p.title}</a>`).join("")
+      : `<a href="enter.html">${(T[lang] && T[lang].nav_enter) || "Entry"}</a>`;
+    wrap.classList.toggle("open", q.length > 0 || document.activeElement === input);
+  };
+  input.addEventListener("input", render);
+  input.addEventListener("focus", render);
+  document.addEventListener("click", (e) => {
+    if (!wrap.contains(e.target)) wrap.classList.remove("open");
+  });
+}
+
+function applyPlaceholders(lang) {
+  const dict = T[lang] || T.en;
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    el.setAttribute("placeholder", dict[key] || T.en[key] || "");
+  });
 }
 
 window.t = t;
