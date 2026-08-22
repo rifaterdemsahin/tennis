@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar · Cambridge Learners Tennis</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">Cambridge Learners Tennis</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courts.html">Courts</a>
+      <a href="players.html">Players</a>
+      <a href="calendar.html" aria-current="page">Calendar</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <p class="eyebrow">Coordination</p>
+    <h1>When we play</h1>
+    <p class="lede">Pattern from August 2026: Saturday mornings are the default. Weekday 15:00–17:00 is the joker window. Confirm the night before. Four players = a match.</p>
+    <p class="notice">Times below are reconstructed from the group’s public-safe essence. Exact court and parking stay in the private chat.</p>
+    <div id="calendar" class="cal"></div>
+  </main>
+  <footer>Update <code>js/calendar.js</code> or <code>data/sessions.json</code> when the next Saturday locks in.</footer>
+  <script src="js/calendar.js"></script>
+</body>
+</html>
