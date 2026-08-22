@@ -14,9 +14,10 @@ It is **not** a club, and it does **not** publish personal data.
 | Page | Purpose |
 |------|---------|
 | `index.html` | How the group works |
-| `courts.html` | Jesus Green, Christ’s Pieces, St Ives Outdoor, Lammas Land |
-| `players.html` | Anonymised roles (no names or phones) |
-| `calendar.html` | Coordination calendar (Aug–Sep 2026 pattern) |
+| `courts.html` | Home court: [Christ's Pieces](https://maps.app.goo.gl/mUtgDr8j7FgAicJx7) |
+| `book.html` | Play Tennis app walkthrough — £3 / 45 min, Saturdays on Erdem |
+| `players.html` | Roles (Erdem named only as Saturday payer) |
+| `calendar.html` | Coordination calendar |
 
 ## Privacy
 

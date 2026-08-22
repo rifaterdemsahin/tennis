@@ -1,11 +1,11 @@
 const SESSIONS = [
   {
     date: "2026-08-08",
-    when: "Saturday morning",
-    court: "St Ives outdoor courts (shaded park courts)",
-    status: "Played",
-    notes: "Four-player social match. Court scout praised the shade. Tea after play. Group learned a shorter walk beats a scenic loop.",
-    kit: ["rackets", "practice balls", "tea cups"]
+    when: "Saturday 09:15–10:00",
+    court: "Christ's Pieces · Court 4 (outdoor hard)",
+    status: "Booked & paid",
+    notes: "Sample Play Tennis booking: £3 for a 45-minute slot. Erdem covers Saturday court fees. Gate PIN stays in the app, not on this site.",
+    kit: ["Play Tennis app", "£3", "racket"]
   },
   {
     date: "2026-08-11",
@@ -26,10 +26,10 @@ const SESSIONS = [
   {
     date: "2026-08-22",
     when: "Saturday morning",
-    court: "Usual city or St Ives — confirm 24h ahead",
+    court: "Christ's Pieces (default) — confirm in Play Tennis",
     status: "Open",
-    notes: "Balls confirmed. Family-friendly: a new junior is starting. Aim for four players for a proper doubles.",
-    kit: ["balls confirmed", "junior welcome"]
+    notes: "Balls confirmed. Family-friendly: a new junior is starting. Aim for four players. Erdem pays the Saturday slot.",
+    kit: ["balls confirmed", "junior welcome", "£3 Saturday"]
   },
   {
     date: "2026-08-29",

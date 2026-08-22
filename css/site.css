@@ -164,6 +164,35 @@ footer {
   font-size: 0.8rem;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.gallery figure {
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.gallery img { width: 100%; height: 280px; object-fit: cover; object-position: top; }
+.gallery.phone img { height: 360px; object-fit: cover; object-position: top; }
+.gallery figcaption { padding: 0.7rem 0.9rem; font-size: 0.9rem; color: var(--muted); }
+
+.cta {
+  display: inline-block;
+  background: var(--moss);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+.cta.alt { background: var(--clay); }
+
 @media (max-width: 700px) {
   .session { grid-template-columns: 1fr; }
   .topbar { flex-direction: column; align-items: flex-start; }
