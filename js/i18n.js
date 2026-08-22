@@ -13,6 +13,7 @@ const T = {
     nav_players: "Players", nav_calendar: "Calendar", nav_shop: "Shop", nav_park: "Parking",
     skip: "Skip to content",
     translate: "Translate",
+    repo_note: "💻 This site is open source: <a href=\"https://github.com/rifaterdemsahin/tennis\">github.com/rifaterdemsahin/tennis</a>. Fork it, improve a page, and send a pull request — the community is welcome.",
     home_eyebrow: "Cambridge · learners welcome",
     home_h1: "Hit, laugh, learn, then tea. ☕",
     home_lede: "A small group of adult learners. Home court: <strong>Christ's Pieces</strong>. Book in the <strong>Play Tennis</strong> app — £3 a slot. Saturdays are on Erdem.",
@@ -247,6 +248,7 @@ T.tr = {
   nav_home: "Ana sayfa", nav_learn: "Öğren", nav_courts: "Kortlar", nav_book: "Rezerve",
   nav_players: "Oyuncular", nav_calendar: "Takvim", nav_shop: "Alışveriş", nav_park: "Park",
   skip: "İçeriğe geç", translate: "Çevir",
+  repo_note: "💻 Bu site açık kaynak: <a href=\"https://github.com/rifaterdemsahin/tennis\">github.com/rifaterdemsahin/tennis</a>. Fork’la, bir sayfayı iyileştir, pull request gönder — topluluk davetlidir.",
   home_eyebrow: "Cambridge · yeni başlayanlar hoş geldiniz",
   home_h1: "Vur, gül, öğren, sonra çay. ☕",
   home_lede: "Küçük bir yetişkin öğrenen grubu. Ana kort: <strong>Christ's Pieces</strong>. <strong>Play Tennis</strong> uygulamasından ayırtın — seans £3. Cumartesileri Erdem ödüyor.",
@@ -1096,6 +1098,17 @@ function applyI18n(lang) {
   if (typeof window.renderCalendar === "function") window.renderCalendar();
 }
 
+function mountRepoFooter() {
+  const foot = document.querySelector("footer") || document.body.appendChild(document.createElement("footer"));
+  if (foot.querySelector(".repo-note")) return;
+  const note = document.createElement("p");
+  note.className = "repo-note";
+  note.setAttribute("data-i18n", "repo_note");
+  note.setAttribute("data-i18n-html", "");
+  note.innerHTML = T.en.repo_note;
+  foot.appendChild(note);
+}
+
 function mountLangBar() {
   if (document.querySelector(".langbar")) return;
   const bar = document.createElement("div");
@@ -1129,5 +1142,6 @@ window.applyI18n = applyI18n;
 
 document.addEventListener("DOMContentLoaded", () => {
   mountLangBar();
+  mountRepoFooter();
   applyI18n(currentLang());
 });

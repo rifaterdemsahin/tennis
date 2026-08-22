@@ -9,7 +9,7 @@ Languages (top bar, remembered in the browser): English, Türkçe, Español, Deu
 ## What this is
 
 Informal coordination: courts, roles, and a Saturday-first calendar.  
-It is **not** a club, and it does **not** publish personal data.
+It is **not** a club. Contribute: [fork the repo](https://github.com/rifaterdemsahin/tennis) and send a pull request.
 
 ## Pages
 
