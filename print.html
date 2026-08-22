@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tennis basics — one-page printout</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    .sheet {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12mm 12mm 10mm;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+    .sheet header.ph {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid var(--moss);
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+    }
+    .sheet header.ph h1 { font-size: 1.35rem; margin: 0; }
+    .sheet header.ph p { margin: 0; font-size: 0.78rem; color: var(--muted); }
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .shots figure {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .shots img { width: 100%; height: 38mm; object-fit: cover; object-position: center top; }
+    .shots figcaption { padding: 5px 7px 7px; font-size: 0.72rem; line-height: 1.3; }
+    .shots strong { display: block; font-size: 0.82rem; margin-bottom: 2px; }
+    .do {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 0.78rem;
+    }
+    .do ul { margin: 0.2rem 0 0; padding-left: 1.1rem; }
+    .credits { font-size: 0.62rem; color: var(--muted); margin-top: 8px; }
+    @media print {
+      .langbar, .topbar, .no-print, footer { display: none !important; }
+      body { background: #fff; }
+      .wrap { width: auto; max-width: none; margin: 0; padding: 0; }
+      .sheet { border: 0; box-shadow: none; border-radius: 0; padding: 0; }
+      @page { size: A4 portrait; margin: 10mm; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar no-print">
+    <a class="brand" href="index.html">🎾 Cambridge Learners Tennis</a>
+    <nav>
+      <a href="learn.html" data-i18n="nav_learn">Learn</a>
+      <a href="print.html" aria-current="page">Print</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <p class="no-print">
+      <button class="cta" type="button" onclick="window.print()">🖨️ Print / Save as PDF (A4)</button>
+      <a class="cta alt" href="assets/basics/tennis-basics-onepager.pdf">⬇️ Download PDF</a>
+    </p>
+    <article class="sheet" id="sheet">
+      <header class="ph">
+        <div>
+          <h1>Tennis basics — what to do</h1>
+          <p>Cambridge learners · Christ's Pieces · rally first, score later</p>
+        </div>
+        <p>One A4 page · bring racket, balls, shoes, water, tea, cup</p>
+      </header>
+      <div class="shots">
+        <figure>
+          <img src="assets/basics/grip.jpg" alt="Hands showing how to grip a tennis racket">
+          <figcaption><strong>1. Grip</strong> Hold the handle like a hammer. Eastern / semi-western is enough for learners.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/basics/forehand.jpg" alt="Forehand demonstration on a tennis court">
+          <figcaption><strong>2. Forehand</strong> Side-on. Racket low to high. Hit in front of you. Finish over the other shoulder.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/basics/backhand.jpg" alt="Two-handed backhand on a tennis court">
+          <figcaption><strong>3. Backhand</strong> Two hands to start. Turn the shoulders. Do not scoop. Left hand drives (for a right-hander).</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/basics/serve.jpg" alt="Player serving a tennis ball">
+          <figcaption><strong>4. Serve</strong> Toss in front, not behind the head. Aim into the opposite service box. Consistency before power.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/basics/volley.jpg" alt="Player hitting a volley near the net">
+          <figcaption><strong>5. Volley</strong> At the net: short punch, racket head up. No big swing.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/basics/balls.jpg" alt="Yellow tennis ball">
+          <figcaption><strong>6. Rally</strong> Aim for 5–7 balls over the net. No winners in the warm-up. Collect every ball.</figcaption>
+        </figure>
+      </div>
+      <div class="do">
+        <div>
+          <strong>On court (45 min)</strong>
+          <ul>
+            <li>0–10 min: cooperative rally</li>
+            <li>10–25 min: cross-court forehand, then backhand</li>
+            <li>25–40 min: mini games to 7 — say the score out loud</li>
+            <li>Last 5: pack balls, leave if the next booking waits</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Score in one line</strong>
+          <ul>
+            <li>0 → 15 → 30 → 40 → game</li>
+            <li>40–40 is deuce; win two in a row</li>
+            <li>Four people = doubles. Talk: yours / mine</li>
+            <li>Be on time: PIN works 10–15 min before the slot</li>
+          </ul>
+        </div>
+      </div>
+      <p class="credits">Photos: Wikimedia Commons (CC / public domain) — grip: SAKIKO how to grip a racket; forehand: démonstration du coup droit; backhand: Andy Murray backhand (stroke example); serve: Tennis-Aufschlag; volley: Colin Fleming volley; ball: Tennis ball. This sheet is for learners, not a coaching licence. https://rifaterdemsahin.github.io/tennis/learn.html</p>
+    </article>
+  </main>
+  <footer class="no-print">Print this page (A4) or open the PDF.</footer>
+  <script src="js/i18n.js"></script>
+</body>
+</html>

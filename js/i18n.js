@@ -1243,6 +1243,7 @@ const SITE_PAGES = [
   { href: "index.html", title: "Home", keys: "home tennis cambridge learners tea" },
   { href: "enter.html", title: "Entry & lock", keys: "enter gate lock keypad star pin council qr lta.org.uk/book christ's pieces search codelocks smartaccess clubspark" },
   { href: "learn.html", title: "Learn", keys: "starter guide shots scoring doubles videos" },
+  { href: "print.html", title: "Print one-pager", keys: "print pdf one pager basics grip forehand backhand serve volley rally" },
   { href: "courts.html", title: "Courts", keys: "christ's pieces jesus green st ives lammas" },
   { href: "book.html", title: "Book", keys: "play tennis app £3 booking pin whatsapp coordinate invite partners who is in" },
   { href: "parking.html", title: "Parking", keys: "petersfield mansions cb1 1bb ring 50 walk" },

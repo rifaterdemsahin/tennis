@@ -1,0 +1,9 @@
+Wikimedia Commons (used on the print one-pager)
+
+grip.jpg     File:SAKIKO - How to grip a tennis racket. (42976710011).jpg
+forehand.jpg File:Démonstration du coup droit.jpg
+backhand.jpg File:Andy Murray Backhand.jpg  (stroke example)
+serve.jpg    File:Tennis-Aufschlag.JPG
+volley.jpg   File:Colin Fleming volley.jpg
+balls.jpg    File:Tennis ball.jpg
+court.svg    File:Tennis court metric.svg
