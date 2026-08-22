@@ -15,7 +15,8 @@ It is **not** a club, and it does **not** publish personal data.
 
 | Page | Purpose |
 |------|---------|
-| `learn.html` | New starter guide: kit, shots, scoring, doubles, 45-min session |
+| `learn.html` | Starter guide, gate keypad, YouTube basics |
+| `shop.html` | Amazon UK kit list (racket, balls, shoes) |
 | `index.html` | How the group works |
 | `courts.html` | Home court: [Christ's Pieces](https://maps.app.goo.gl/mUtgDr8j7FgAicJx7) |
 | `book.html` | Play Tennis app walkthrough — £3 / 45 min, Saturdays on Erdem |
