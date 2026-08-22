@@ -1,53 +1,16 @@
 const SESSIONS = [
-  {
-    date: "2026-08-08",
-    when: "Saturday 09:15–10:00",
-    court: "Christ's Pieces · Court 4 (outdoor hard)",
-    status: "Booked & paid",
-    notes: "Sample Play Tennis booking: £3 for a 45-minute slot. Erdem covers Saturday court fees. Gate PIN stays in the app, not on this site.",
-    kit: ["Play Tennis app", "£3", "racket"]
-  },
-  {
-    date: "2026-08-11",
-    when: "Tuesday 15:00–17:00",
-    court: "Cambridge city courts (TBC)",
-    status: "Weekday float",
-    notes: "Joker slot: one learner available after 15:00. Confirm on the group chat the night before.",
-    kit: ["balls if you have a can"]
-  },
-  {
-    date: "2026-08-15",
-    when: "Saturday morning",
-    court: "Jesus Green or fallback court",
-    status: "Played / mixed turnout",
-    notes: "Balls were covered by a regular. Scoring practice offered. A few people paused this week.",
-    kit: ["balls brought by a regular"]
-  },
-  {
-    date: "2026-08-22",
-    when: "Saturday morning",
-    court: "Christ's Pieces (default) — confirm in Play Tennis",
-    status: "Open",
-    notes: "Balls confirmed. Family-friendly: a new junior is starting. Aim for four players. Erdem pays the Saturday slot.",
-    kit: ["balls confirmed", "junior welcome", "£3 Saturday"]
-  },
-  {
-    date: "2026-08-29",
-    when: "Late August weekend",
-    court: "TBC — court scout back in town",
-    status: "Planned",
-    notes: "Court scout returns around month-end. Good week to lock a shaded court again.",
-    kit: ["book early"]
-  },
-  {
-    date: "2026-09-05",
-    when: "From September",
-    court: "Rotate Jesus Green / St Ives / city parks",
-    status: "Recurring",
-    notes: "Scoring partner aims to rejoin after September. Kids court when enough juniors show up.",
-    kit: ["own racket", "share balls"]
-  }
+  { date: "2026-08-08", whenKey: "s1_when", courtKey: "s1_court", statusKey: "s1_status", notesKey: "s1_notes", kit: ["Play Tennis app", "£3", "racket"] },
+  { date: "2026-08-11", whenKey: "s2_when", courtKey: "s2_court", statusKey: "s2_status", notesKey: "s2_notes", kit: ["balls if you have a can"] },
+  { date: "2026-08-15", whenKey: "s3_when", courtKey: "s3_court", statusKey: "s3_status", notesKey: "s3_notes", kit: ["balls brought by a regular"] },
+  { date: "2026-08-22", whenKey: "s4_when", courtKey: "s4_court", statusKey: "s4_status", notesKey: "s4_notes", kit: ["balls confirmed", "junior welcome", "£3 Saturday"] },
+  { date: "2026-08-29", whenKey: "s5_when", courtKey: "s5_court", statusKey: "s5_status", notesKey: "s5_notes", kit: ["book early"] },
+  { date: "2026-09-05", whenKey: "s6_when", courtKey: "s6_court", statusKey: "s6_status", notesKey: "s6_notes", kit: ["own racket", "share balls"] }
 ];
+
+function tx(key, fallback) {
+  if (typeof window.t === "function") return window.t(key);
+  return fallback || key;
+}
 
 function renderCalendar() {
   const root = document.getElementById("calendar");
@@ -56,16 +19,17 @@ function renderCalendar() {
     <article class="session">
       <div>
         <time datetime="${s.date}">${s.date}</time>
-        <div class="muted">${s.when}</div>
-        <span class="tag">${s.status}</span>
+        <div class="muted">${tx(s.whenKey)}</div>
+        <span class="tag">${tx(s.statusKey)}</span>
       </div>
       <div>
-        <strong>${s.court}</strong>
-        <p>${s.notes}</p>
+        <strong>${tx(s.courtKey)}</strong>
+        <p>${tx(s.notesKey)}</p>
         <div class="kit">${s.kit.map((k) => `<span>${k}</span>`).join("")}</div>
       </div>
     </article>
   `).join("");
 }
 
+window.renderCalendar = renderCalendar;
 document.addEventListener("DOMContentLoaded", renderCalendar);

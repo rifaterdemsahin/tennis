@@ -28,6 +28,37 @@ img { max-width: 100%; display: block; }
 }
 .skip:focus { left: 1rem; top: 1rem; background: #fff; padding: 0.5rem; }
 
+.langbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 6vw;
+  background: var(--moss);
+  color: #e7efe8;
+  font-size: 0.82rem;
+  position: sticky;
+  top: 0;
+  z-index: 12;
+}
+.langbar span.label { margin-right: 0.35rem; font-weight: 600; }
+.langbar button {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  cursor: pointer;
+  font: inherit;
+}
+.langbar button[aria-pressed="true"],
+.langbar button:hover {
+  background: #fff;
+  color: var(--moss);
+  border-color: #fff;
+}
+
 .topbar {
   display: flex;
   align-items: center;
@@ -37,7 +68,7 @@ img { max-width: 100%; display: block; }
   background: var(--paper);
   border-bottom: 1px solid var(--line);
   position: sticky;
-  top: 0;
+  top: 2.2rem;
   z-index: 10;
 }
 .brand {

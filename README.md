@@ -4,6 +4,8 @@ Public, anonymous site for a small group of **adult tennis learners in Cambridge
 
 Live (after GitHub Pages is on): **https://rifaterdemsahin.github.io/tennis/**
 
+Languages (top bar, remembered in the browser): English, Türkçe, Español, Deutsch, Italiano, 中文.
+
 ## What this is
 
 Informal coordination: courts, roles, and a Saturday-first calendar.  

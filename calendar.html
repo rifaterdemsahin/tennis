@@ -11,22 +11,23 @@
   <header class="topbar">
     <a class="brand" href="index.html">🎾 Cambridge Learners Tennis</a>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="learn.html">Learn</a>
-      <a href="courts.html">Courts</a>
-      <a href="book.html">Book</a>
-      <a href="players.html">Players</a>
-      <a href="calendar.html" aria-current="page">Calendar</a>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="learn.html" data-i18n="nav_learn">Learn</a>
+      <a href="courts.html" data-i18n="nav_courts">Courts</a>
+      <a href="book.html" data-i18n="nav_book">Book</a>
+      <a href="players.html" data-i18n="nav_players">Players</a>
+      <a href="calendar.html" aria-current="page" data-i18n="nav_calendar">Calendar</a>
     </nav>
   </header>
   <main class="wrap">
-    <p class="eyebrow">Coordination</p>
-    <h1>When we play 📅</h1>
-    <p class="lede">Saturdays first (Erdem pays the £3 Play Tennis slot). Weekday 15:00–17:00 is the joker window. Confirm the night before. Four players = a match.</p>
-    <p class="notice">Times below are reconstructed from the group’s public-safe essence. Exact court and parking stay in the private chat.</p>
+    <p class="eyebrow" data-i18n="cal_eyebrow">Coordination</p>
+    <h1 data-i18n="cal_h1">When we play 📅</h1>
+    <p class="lede" data-i18n="cal_lede">Saturdays first (Erdem pays the £3 Play Tennis slot). Weekday 15:00–17:00 is the joker window. Confirm the night before. Four players = a match.</p>
+    <p class="notice" data-i18n="cal_notice">Times below are reconstructed from the group’s public-safe essence. Exact court and parking stay in the private chat.</p>
     <div id="calendar" class="cal"></div>
   </main>
-  <footer>Update <code>js/calendar.js</code> or <code>data/sessions.json</code> when the next Saturday locks in.</footer>
+  <footer data-i18n="cal_foot">Update the calendar file when the next Saturday locks in.</footer>
+  <script src="js/i18n.js"></script>
   <script src="js/calendar.js"></script>
 </body>
 </html>
