@@ -10,7 +10,7 @@ const LANGS = [
 const T = {
   en: {
     nav_home: "Home", nav_learn: "Learn", nav_courts: "Courts", nav_book: "Book",
-    nav_players: "Players", nav_calendar: "Calendar", nav_shop: "Shop", nav_park: "Parking",
+    nav_players: "Players", nav_calendar: "Calendar", nav_shop: "Shop", nav_park: "Parking", nav_kids: "Kids",
     skip: "Skip to content",
     translate: "Translate",
     repo_note: "💻 This site is open source: <a href=\"https://github.com/rifaterdemsahin/tennis\">github.com/rifaterdemsahin/tennis</a>. Fork it, improve a page, and send a pull request — the community is welcome.",
@@ -172,6 +172,23 @@ const T = {
     park_pin: "📍 Parking pin (Petersfield Mansions)",
     park_court: "🎾 Court pin (Christ's Pieces)",
     park_foot: "Free bays at Erdem’s space, CB1 1BB · ring 50 · ~15 min walk.",
+    kids_eyebrow: "Family mornings",
+    kids_h1: "Bring your kids 🧒",
+    kids_lede: "Children are welcome on tennis day. They <strong>watch</strong>, they <strong>practice with us</strong>, and they stay part of the morning — not parked on a bench with nothing to do.",
+    kids_notice: "This is still a learners’ hit, not a kids’ academy. A parent or carer stays with them. If enough children come, we try to book a <strong>second court</strong> so they can rally on their own.",
+    kids_watch_h: "👀 They watch",
+    kids_watch_p: "Standing at the fence or sitting on the grass, they see real rallies: how we serve, how we call the score, how we laugh when the ball goes long. Watching is learning.",
+    kids_play_h: "🎾 They practice with us",
+    kids_play_p: "Between games we feed easy balls, let them take a few taps, and mix a short rally. Mini / red or orange balls are kinder than a full yellow ball if they are small. We do not dump them into adult doubles unplanned.",
+    kids_balls_h: "🟡 Some collect the balls",
+    kids_balls_p: "Chasing and gathering tennis balls is a proper job. It keeps them moving, helps the match, and they take it seriously — “ball kid” is a real role.",
+    kids_busy_h: "💬 They keep busy and talk",
+    kids_busy_p: "Kids talk to each other at the side of the court, invent little games, share water, and wait for their turn. The social bit matters as much as the hitting.",
+    kids_bring_h: "What helps",
+    kids_b1: "A smaller racket if they have one (or share a light adult frame).",
+    kids_b2: "Water, a snack, a cap. Same walk: ~15 min from Petersfield after ring 50.",
+    kids_b3: "Say in the WhatsApp group the night before if children are coming, so we can plan a court.",
+    kids_foot: "Kids watch, practice with us, collect balls, and talk — tennis day is a family morning.",
 
     book_eyebrow: "📱 LTA Play Tennis / ClubSpark",
     book_h1: "Book a court in the Play Tennis app",
@@ -246,7 +263,7 @@ const T = {
 
 T.tr = {
   nav_home: "Ana sayfa", nav_learn: "Öğren", nav_courts: "Kortlar", nav_book: "Rezerve",
-  nav_players: "Oyuncular", nav_calendar: "Takvim", nav_shop: "Alışveriş", nav_park: "Park",
+  nav_players: "Oyuncular", nav_calendar: "Takvim", nav_shop: "Alışveriş", nav_park: "Park", nav_kids: "Çocuklar",
   skip: "İçeriğe geç", translate: "Çevir",
   repo_note: "💻 Bu site açık kaynak: <a href=\"https://github.com/rifaterdemsahin/tennis\">github.com/rifaterdemsahin/tennis</a>. Fork’la, bir sayfayı iyileştir, pull request gönder — topluluk davetlidir.",
   home_eyebrow: "Cambridge · yeni başlayanlar hoş geldiniz",
@@ -404,6 +421,23 @@ T.tr = {
   park_pin: "📍 Park pini (Petersfield Mansions)",
   park_court: "🎾 Kort pini (Christ's Pieces)",
   park_foot: "Erdem’in yeri, CB1 1BB · 50’ye bas · ~15 dk yürüyüş.",
+  kids_eyebrow: "Aile sabahları",
+  kids_h1: "Çocuklarınızı getirin 🧒",
+  kids_lede: "Tenis gününde çocuklar hoş karşılanır. <strong>İzlerler</strong>, <strong>bizimle alıştırma yaparlar</strong> ve sabahın parçası olurlar — bankta boş oturmazlar.",
+  kids_notice: "Bu hâlâ öğrenenlerin maçı, çocuk akademisi değil. Ebeveyn veya bakan kişi yanlarında kalır. Yeterli çocuk gelirse <strong>ikinci kort</strong> ayarlarız, kendi rallilerini yapsınlar.",
+  kids_watch_h: "👀 İzlerler",
+  kids_watch_p: "File kenarında veya çimde gerçek ralliyi görürler: nasıl servis atılır, sayı nasıl söylenir, top uzun gidince nasıl gülünür. İzlemek de öğrenmektir.",
+  kids_play_h: "🎾 Bizimle pratik yaparlar",
+  kids_play_p: "Oyun aralarında kolay top atarız, birkaç vuruş yaptırırız, kısa ralli karıştırırız. Küçükler için kırmızı / turuncu mini top sarı toptan iyidir. Plansız yetişkin çiftlerine sokmayız.",
+  kids_balls_h: "🟡 Bazıları top toplar",
+  kids_balls_p: "Tenis topu kovalayıp toplamak gerçek bir iş. Hareket ederler, maça yardım ederler ve ciddiye alırlar — “top çocuğu” bir roldür.",
+  kids_busy_h: "💬 Meşgul kalır, konuşurlar",
+  kids_busy_p: "Kort kenarında birbirleriyle konuşur, küçük oyun uydurur, su paylaşır, sırasını bekler. Sosyal kısım vurmak kadar önemli.",
+  kids_bring_h: "Ne işe yarar",
+  kids_b1: "Varsa küçük raket (veya hafif yetişkin raketi paylaşın).",
+  kids_b2: "Su, atıştırmalık, şapka. Aynı yürüyüş: 50’ye bastıktan sonra Petersfield’ten ~15 dk.",
+  kids_b3: "Çocuk gelecekse bir gece önce WhatsApp’ta söyleyin, kort planlayalım.",
+  kids_foot: "Çocuklar izler, bizimle çalışır, top toplar, konuşur — tenis günü aile sabahıdır.",
   book_eyebrow: "📱 LTA Play Tennis / ClubSpark",
   book_h1: "Play Tennis uygulamasından kort ayırt",
   book_lede: "Kullandığımız uygulama bu. <strong>Christ's Pieces</strong> ara, 45 dakikalık seans seç, <strong>£3</strong> öde. Cumartesileri Erdem karşılıyor.",
@@ -477,7 +511,7 @@ function copyFromEn(over) {
 
 T.es = copyFromEn({
   nav_home: "Inicio", nav_learn: "Aprender", nav_courts: "Pistas", nav_book: "Reservar",
-  nav_players: "Jugadores", nav_calendar: "Calendario", nav_shop: "Comprar", nav_park: "Parking",
+  nav_players: "Jugadores", nav_calendar: "Calendario", nav_shop: "Comprar", nav_park: "Parking", nav_kids: "Niños",
   skip: "Saltar al contenido", translate: "Traducir",
   home_eyebrow: "Cambridge · bienvenidos principiantes",
   home_h1: "Golpea, ríe, aprende y luego el té. ☕",
@@ -625,7 +659,7 @@ T.es = copyFromEn({
 
 T.de = copyFromEn({
   nav_home: "Start", nav_learn: "Lernen", nav_courts: "Plätze", nav_book: "Buchen",
-  nav_players: "Spieler", nav_calendar: "Kalender", nav_shop: "Shop", nav_park: "Parken",
+  nav_players: "Spieler", nav_calendar: "Kalender", nav_shop: "Shop", nav_park: "Parken", nav_kids: "Kinder",
   skip: "Zum Inhalt", translate: "Übersetzen",
   home_eyebrow: "Cambridge · Anfänger willkommen",
   home_h1: "Schlagen, lachen, lernen, dann Tee. ☕",
@@ -773,7 +807,7 @@ T.de = copyFromEn({
 
 T.it = copyFromEn({
   nav_home: "Home", nav_learn: "Impara", nav_courts: "Campi", nav_book: "Prenota",
-  nav_players: "Giocatori", nav_calendar: "Calendario", nav_shop: "Shop", nav_park: "Parcheggio",
+  nav_players: "Giocatori", nav_calendar: "Calendario", nav_shop: "Shop", nav_park: "Parcheggio", nav_kids: "Bambini",
   skip: "Vai al contenuto", translate: "Traduci",
   home_eyebrow: "Cambridge · principianti benvenuti",
   home_h1: "Colpisci, ridi, impara, poi il tè. ☕",
@@ -921,7 +955,7 @@ T.it = copyFromEn({
 
 T.zh = copyFromEn({
   nav_home: "首页", nav_learn: "学习", nav_courts: "球场", nav_book: "预订",
-  nav_players: "球友", nav_calendar: "日历", nav_shop: "购物", nav_park: "停车",
+  nav_players: "球友", nav_calendar: "日历", nav_shop: "购物", nav_park: "停车", nav_kids: "孩子",
   skip: "跳到正文", translate: "翻译",
   home_eyebrow: "剑桥 · 欢迎初学者",
   home_h1: "打球、欢笑、学习，然后喝茶。☕",

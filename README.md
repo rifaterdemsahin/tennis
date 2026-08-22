@@ -18,6 +18,7 @@ It is **not** a club. Contribute: [fork the repo](https://github.com/rifaterdems
 | `learn.html` | Starter guide, gate keypad, YouTube basics |
 | `shop.html` | Amazon UK kit list (racket, balls, shoes) |
 | `parking.html` | Petersfield Mansions CB1 1BB, ring 50, walk to Christ's Pieces |
+| `kids.html` | Bring your kids — watch, practice, collect balls, talk |
 | `index.html` | How the group works |
 | `courts.html` | Home court: [Christ's Pieces](https://maps.app.goo.gl/mUtgDr8j7FgAicJx7) |
 | `book.html` | Play Tennis app walkthrough — £3 / 45 min, Saturdays on Erdem |
