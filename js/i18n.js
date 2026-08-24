@@ -10,7 +10,7 @@ const LANGS = [
 const T = {
   en: {
     nav_home: "Home", nav_learn: "Learn", nav_courts: "Courts", nav_book: "Book",
-    nav_players: "Players", nav_calendar: "Calendar", nav_shop: "Shop", nav_park: "Parking", nav_kids: "Kids", nav_enter: "Entry",
+    nav_players: "Players", nav_calendar: "Calendar", nav_shop: "Shop", nav_park: "Parking", nav_kids: "Kids", nav_enter: "Entry", nav_receipt: "Receipt",
     search_ph: "Search this site",
     skip: "Skip to content",
     translate: "Translate",
@@ -42,6 +42,8 @@ const T = {
     learn_check: "🎒 First Saturday checklist",
     bring_h: "🧳 What to bring",
     bring_p: "Tick these before you leave. <strong>Be on time</strong> — the gate PIN only works 10–15 minutes before the booking, and the walk from the car is about 15 minutes.",
+    bring_receipt: "📧 Get receipt email before arrival (<a href=\"receipt.html\">proof of booking</a>)",
+    bring_code: "🔑 Share gate / login code in the WhatsApp group",
     bring_tea: "☕ Tea",
     bring_water: "💧 Water",
     bring_cup: "🥤 Cup (plastic is fine)",
@@ -51,6 +53,28 @@ const T = {
     bring_ontime: "⏰ Be on time",
     wa_join: "💬 Join the WhatsApp group",
     wa_share: "📤 Share this checklist on WhatsApp",
+    receipt_eyebrow: "📧 Cambridge City Council Email Receipt",
+    receipt_h1: "What email you get after registering for the court",
+    receipt_lede: "When you book a court at <strong>Christ's Pieces</strong> or Jesus Green via Play Tennis / ClubSpark, you immediately receive an official payment confirmation and receipt from <strong>Cambridge City Council</strong>.",
+    receipt_check_h: "✅ Pre-Arrival Checklist",
+    receipt_check_p: "Always complete these two key actions <strong>before arriving at the courts</strong>:",
+    receipt_check_1: "<strong>📧 Get the receipt before arrival:</strong> Check your inbox (or spam) for the Cambridge City Council receipt email. Keep it on your phone as official proof of booking in case another player is on your court.",
+    receipt_check_2: "<strong>🔑 Share login / gate code in the group:</strong> The person who booked must check the Play Tennis app / confirmation and share the PIN/code in the WhatsApp group ahead of time so arriving players can enter.",
+    receipt_breakdown_h: "📸 Sample Email Receipt",
+    receipt_breakdown_p: "Here is the exact email receipt generated after registering and paying for a court slot at Christ's Pieces:",
+    receipt_fig_cap: "Official Cambridge City Council email confirmation & receipt [#1889-6565].",
+    receipt_details_h: "🧾 Receipt Details Breakdown",
+    receipt_why_h: "💡 Why both steps are essential:",
+    receipt_why_p1: "<strong>1. Proof of Booking:</strong> Casual players sometimes linger on empty courts. Having your receipt open in your email lets you politely show you have reserved that court and time.",
+    receipt_why_p2: "<strong>2. Gate Code Access:</strong> Electronic Codelocks keypads require the active PIN. If the person who booked is parking or walking from Petersfield Mansions, having the code shared in WhatsApp ensures nobody is stuck waiting outside the fence.",
+    receipt_steps_h: "📋 Step-by-Step After Booking",
+    receipt_s1_h: "1. Verify Email Receipt",
+    receipt_s1_p: "Check your email right after checkout. Confirm the date (e.g. Saturday), court number, and 45-minute time window.",
+    receipt_s2_h: "2. Grab PIN & Share to WhatsApp",
+    receipt_s2_p: "Open the Play Tennis app / confirmation. Copy the gate PIN and post it in the private WhatsApp group with the court number and time.",
+    receipt_s3_h: "3. Unlock & Enjoy",
+    receipt_s3_p: "Arrive on time, enter <strong>*</strong> followed by the PIN on the gate keypad, and start playing!",
+    receipt_foot: "Cambridge City Council receipt guide · Christ's Pieces tennis · Saturdays on Erdem.",
     learn_kit: "1. Kit",
     learn_kit1: "🎾 Any racket (borrow one in the chat if you have none)",
     learn_kit2: "👟 Trainers with a decent sole — not smooth-soled office shoes",
@@ -294,7 +318,7 @@ const T = {
 
 T.tr = {
   nav_home: "Ana sayfa", nav_learn: "Öğren", nav_courts: "Kortlar", nav_book: "Rezerve",
-  nav_players: "Oyuncular", nav_calendar: "Takvim", nav_shop: "Alışveriş", nav_park: "Park", nav_kids: "Çocuklar", nav_enter: "Giriş",
+  nav_players: "Oyuncular", nav_calendar: "Takvim", nav_shop: "Alışveriş", nav_park: "Park", nav_kids: "Çocuklar", nav_enter: "Giriş", nav_receipt: "Makbuz",
   search_ph: "Sitede ara",
   skip: "İçeriğe geç", translate: "Çevir",
   repo_note: "💻 Bu site açık kaynak: <a href=\"https://github.com/rifaterdemsahin/tennis\">github.com/rifaterdemsahin/tennis</a>. Fork’la, bir sayfayı iyileştir, pull request gönder — topluluk davetlidir.",
@@ -324,6 +348,8 @@ T.tr = {
   learn_check: "🎒 İlk cumartesi listesi",
   bring_h: "🧳 Ne getirmeli",
   bring_p: "Çıkmadan işaretle. <strong>Zamanında ol</strong> — kapı PIN’i yalnızca başlangıçtan 10–15 dk önce çalışır; arabadan yürüyüş ~15 dakika.",
+  bring_receipt: "📧 Gelmeden önce makbuz e-postasını alın (<a href=\"receipt.html\">rezervasyon kanıtı</a>)",
+  bring_code: "🔑 Giriş / kapı PIN kodunu WhatsApp grubunda paylaşın",
   bring_tea: "☕ Çay",
   bring_water: "💧 Su",
   bring_cup: "🥤 Bardak (plastik olur)",
@@ -573,7 +599,7 @@ function copyFromEn(over) {
 
 T.es = copyFromEn({
   nav_home: "Inicio", nav_learn: "Aprender", nav_courts: "Pistas", nav_book: "Reservar",
-  nav_players: "Jugadores", nav_calendar: "Calendario", nav_shop: "Comprar", nav_park: "Parking", nav_kids: "Niños", nav_enter: "Entrada", search_ph: "Buscar",
+  nav_players: "Jugadores", nav_calendar: "Calendario", nav_shop: "Comprar", nav_park: "Parking", nav_kids: "Niños", nav_enter: "Entrada", nav_receipt: "Recibo", search_ph: "Buscar",
   skip: "Saltar al contenido", translate: "Traducir",
   home_eyebrow: "Cambridge · bienvenidos principiantes",
   home_h1: "Golpea, ríe, aprende y luego el té. ☕",
@@ -721,7 +747,7 @@ T.es = copyFromEn({
 
 T.de = copyFromEn({
   nav_home: "Start", nav_learn: "Lernen", nav_courts: "Plätze", nav_book: "Buchen",
-  nav_players: "Spieler", nav_calendar: "Kalender", nav_shop: "Shop", nav_park: "Parken", nav_kids: "Kinder", nav_enter: "Zugang", search_ph: "Suche",
+  nav_players: "Spieler", nav_calendar: "Kalender", nav_shop: "Shop", nav_park: "Parken", nav_kids: "Kinder", nav_enter: "Zugang", nav_receipt: "Beleg", search_ph: "Suche",
   skip: "Zum Inhalt", translate: "Übersetzen",
   home_eyebrow: "Cambridge · Anfänger willkommen",
   home_h1: "Schlagen, lachen, lernen, dann Tee. ☕",
@@ -869,7 +895,7 @@ T.de = copyFromEn({
 
 T.it = copyFromEn({
   nav_home: "Home", nav_learn: "Impara", nav_courts: "Campi", nav_book: "Prenota",
-  nav_players: "Giocatori", nav_calendar: "Calendario", nav_shop: "Shop", nav_park: "Parcheggio", nav_kids: "Bambini", nav_enter: "Ingresso", search_ph: "Cerca",
+  nav_players: "Giocatori", nav_calendar: "Calendario", nav_shop: "Shop", nav_park: "Parcheggio", nav_kids: "Bambini", nav_enter: "Ingresso", nav_receipt: "Ricevuta", search_ph: "Cerca",
   skip: "Vai al contenuto", translate: "Traduci",
   home_eyebrow: "Cambridge · principianti benvenuti",
   home_h1: "Colpisci, ridi, impara, poi il tè. ☕",
@@ -1017,7 +1043,7 @@ T.it = copyFromEn({
 
 T.zh = copyFromEn({
   nav_home: "首页", nav_learn: "学习", nav_courts: "球场", nav_book: "预订",
-  nav_players: "球友", nav_calendar: "日历", nav_shop: "购物", nav_park: "停车", nav_kids: "孩子", nav_enter: "入场", search_ph: "搜索本站",
+  nav_players: "球友", nav_calendar: "日历", nav_shop: "购物", nav_park: "停车", nav_kids: "孩子", nav_enter: "入场", nav_receipt: "收据", search_ph: "搜索本站",
   skip: "跳到正文", translate: "翻译",
   home_eyebrow: "剑桥 · 欢迎初学者",
   home_h1: "打球、欢笑、学习，然后喝茶。☕",
@@ -1242,6 +1268,7 @@ function mountLangBar() {
 const SITE_PAGES = [
   { href: "index.html", title: "Home", keys: "home tennis cambridge learners tea" },
   { href: "enter.html", title: "Entry & lock", keys: "enter gate lock keypad star pin council qr lta.org.uk/book christ's pieces search codelocks smartaccess clubspark" },
+  { href: "receipt.html", title: "Receipt & Email Confirmation", keys: "receipt email confirmation registration cambridge city council proof booking pin login code gate share whatsapp checklist" },
   { href: "learn.html", title: "Learn", keys: "starter guide shots scoring doubles videos" },
   { href: "print.html", title: "Print one-pager", keys: "print pdf one pager basics grip forehand backhand serve volley rally" },
   { href: "basics-1-grip.html", title: "1. Grip", keys: "grip handle eastern continental ready" },
@@ -1265,7 +1292,7 @@ function wireSearch(wrap) {
   const render = () => {
     const q = input.value.trim().toLowerCase();
     const lang = document.documentElement.lang || "en";
-    const navKey = { "index.html": "nav_home", "enter.html": "nav_enter", "learn.html": "nav_learn", "courts.html": "nav_courts", "book.html": "nav_book", "parking.html": "nav_park", "kids.html": "nav_kids", "shop.html": "nav_shop", "players.html": "nav_players", "calendar.html": "nav_calendar" };
+    const navKey = { "index.html": "nav_home", "enter.html": "nav_enter", "receipt.html": "nav_receipt", "learn.html": "nav_learn", "courts.html": "nav_courts", "book.html": "nav_book", "parking.html": "nav_park", "kids.html": "nav_kids", "shop.html": "nav_shop", "players.html": "nav_players", "calendar.html": "nav_calendar" };
     const list = SITE_PAGES.filter((p) => {
       if (!q) return true;
       const label = (T[lang] && T[lang][navKey[p.href]]) || p.title;
