@@ -9,8 +9,8 @@ const LANGS = [
 
 const T = {
   en: {
-    nav_home: "Home", nav_learn: "Learn", nav_courts: "Courts", nav_book: "Book",
-    nav_players: "Players", nav_calendar: "Calendar", nav_shop: "Shop", nav_park: "Parking", nav_kids: "Kids", nav_enter: "Entry", nav_receipt: "Receipt",
+    nav_home: "🏠 Home", nav_learn: "📚 Learn", nav_courts: "📍 Courts", nav_book: "📱 Book",
+    nav_players: "👥 Players", nav_calendar: "📅 Calendar", nav_shop: "🛒 Shop", nav_park: "🅿️ Parking", nav_kids: "🧒 Kids", nav_enter: "🔐 Entry", nav_receipt: "🧾 Receipt",
     search_ph: "Search this site",
     skip: "Skip to content",
     translate: "Translate",
@@ -317,8 +317,8 @@ const T = {
 };
 
 T.tr = {
-  nav_home: "Ana sayfa", nav_learn: "Öğren", nav_courts: "Kortlar", nav_book: "Rezerve",
-  nav_players: "Oyuncular", nav_calendar: "Takvim", nav_shop: "Alışveriş", nav_park: "Park", nav_kids: "Çocuklar", nav_enter: "Giriş", nav_receipt: "Makbuz",
+  nav_home: "🏠 Ana sayfa", nav_learn: "📚 Öğren", nav_courts: "📍 Kortlar", nav_book: "📱 Rezerve",
+  nav_players: "👥 Oyuncular", nav_calendar: "📅 Takvim", nav_shop: "🛒 Alışveriş", nav_park: "🅿️ Park", nav_kids: "🧒 Çocuklar", nav_enter: "🔐 Giriş", nav_receipt: "🧾 Makbuz",
   search_ph: "Sitede ara",
   skip: "İçeriğe geç", translate: "Çevir",
   repo_note: "💻 Bu site açık kaynak: <a href=\"https://github.com/rifaterdemsahin/tennis\">github.com/rifaterdemsahin/tennis</a>. Fork’la, bir sayfayı iyileştir, pull request gönder — topluluk davetlidir.",
@@ -598,8 +598,8 @@ function copyFromEn(over) {
 }
 
 T.es = copyFromEn({
-  nav_home: "Inicio", nav_learn: "Aprender", nav_courts: "Pistas", nav_book: "Reservar",
-  nav_players: "Jugadores", nav_calendar: "Calendario", nav_shop: "Comprar", nav_park: "Parking", nav_kids: "Niños", nav_enter: "Entrada", nav_receipt: "Recibo", search_ph: "Buscar",
+  nav_home: "🏠 Inicio", nav_learn: "📚 Aprender", nav_courts: "📍 Pistas", nav_book: "📱 Reservar",
+  nav_players: "👥 Jugadores", nav_calendar: "📅 Calendario", nav_shop: "🛒 Comprar", nav_park: "🅿️ Parking", nav_kids: "🧒 Niños", nav_enter: "🔐 Entrada", nav_receipt: "🧾 Recibo", search_ph: "Buscar",
   skip: "Saltar al contenido", translate: "Traducir",
   home_eyebrow: "Cambridge · bienvenidos principiantes",
   home_h1: "Golpea, ríe, aprende y luego el té. ☕",
@@ -746,8 +746,8 @@ T.es = copyFromEn({
 });
 
 T.de = copyFromEn({
-  nav_home: "Start", nav_learn: "Lernen", nav_courts: "Plätze", nav_book: "Buchen",
-  nav_players: "Spieler", nav_calendar: "Kalender", nav_shop: "Shop", nav_park: "Parken", nav_kids: "Kinder", nav_enter: "Zugang", nav_receipt: "Beleg", search_ph: "Suche",
+  nav_home: "🏠 Start", nav_learn: "📚 Lernen", nav_courts: "📍 Plätze", nav_book: "📱 Buchen",
+  nav_players: "👥 Spieler", nav_calendar: "📅 Kalender", nav_shop: "🛒 Shop", nav_park: "🅿️ Parken", nav_kids: "🧒 Kinder", nav_enter: "🔐 Zugang", nav_receipt: "🧾 Beleg", search_ph: "Suche",
   skip: "Zum Inhalt", translate: "Übersetzen",
   home_eyebrow: "Cambridge · Anfänger willkommen",
   home_h1: "Schlagen, lachen, lernen, dann Tee. ☕",
@@ -894,8 +894,8 @@ T.de = copyFromEn({
 });
 
 T.it = copyFromEn({
-  nav_home: "Home", nav_learn: "Impara", nav_courts: "Campi", nav_book: "Prenota",
-  nav_players: "Giocatori", nav_calendar: "Calendario", nav_shop: "Shop", nav_park: "Parcheggio", nav_kids: "Bambini", nav_enter: "Ingresso", nav_receipt: "Ricevuta", search_ph: "Cerca",
+  nav_home: "🏠 Home", nav_learn: "📚 Impara", nav_courts: "📍 Campi", nav_book: "📱 Prenota",
+  nav_players: "👥 Giocatori", nav_calendar: "📅 Calendario", nav_shop: "🛒 Shop", nav_park: "🅿️ Parcheggio", nav_kids: "🧒 Bambini", nav_enter: "🔐 Ingresso", nav_receipt: "🧾 Ricevuta", search_ph: "Cerca",
   skip: "Vai al contenuto", translate: "Traduci",
   home_eyebrow: "Cambridge · principianti benvenuti",
   home_h1: "Colpisci, ridi, impara, poi il tè. ☕",
@@ -1042,8 +1042,8 @@ T.it = copyFromEn({
 });
 
 T.zh = copyFromEn({
-  nav_home: "首页", nav_learn: "学习", nav_courts: "球场", nav_book: "预订",
-  nav_players: "球友", nav_calendar: "日历", nav_shop: "购物", nav_park: "停车", nav_kids: "孩子", nav_enter: "入场", nav_receipt: "收据", search_ph: "搜索本站",
+  nav_home: "🏠 首页", nav_learn: "📚 学习", nav_courts: "📍 球场", nav_book: "📱 预订",
+  nav_players: "👥 球友", nav_calendar: "📅 日历", nav_shop: "🛒 购物", nav_park: "🅿️ 停车", nav_kids: "🧒 孩子", nav_enter: "🔐 入场", nav_receipt: "🧾 收据", search_ph: "搜索本站",
   skip: "跳到正文", translate: "翻译",
   home_eyebrow: "剑桥 · 欢迎初学者",
   home_h1: "打球、欢笑、学习，然后喝茶。☕",
