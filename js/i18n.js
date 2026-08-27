@@ -10,7 +10,7 @@ const LANGS = [
 const T = {
   en: {
     nav_home: "🏠 Home", nav_learn: "📚 Learn", nav_courts: "📍 Courts", nav_book: "📱 Book",
-    nav_players: "👥 Players", nav_calendar: "📅 Calendar", nav_shop: "🛒 Shop", nav_park: "🅿️ Parking", nav_kids: "🧒 Kids", nav_enter: "🔐 Entry", nav_receipt: "🧾 Receipt",
+    nav_players: "👥 Players", nav_calendar: "📅 Calendar", nav_weather: "⛅ Weather", nav_shop: "🛒 Shop", nav_park: "🅿️ Parking", nav_kids: "🧒 Kids", nav_enter: "🔐 Entry", nav_receipt: "🧾 Receipt",
     search_ph: "Search this site",
     skip: "Skip to content",
     translate: "Translate",
@@ -312,13 +312,47 @@ const T = {
     s6_when: "From September",
     s6_court: "Rotate Jesus Green / St Ives / city parks",
     s6_status: "Recurring",
-    s6_notes: "Scoring partner aims to rejoin after September. Kids court when enough juniors show up."
+    s6_notes: "Scoring partner aims to rejoin after September. Kids court when enough juniors show up.",
+
+    wx_eyebrow: "Cambridge · Christ's Pieces",
+    wx_h1: "Saturday weather ⛅",
+    wx_lede: "Live forecast for outdoor tennis at Christ's Pieces. A Saturday morning report goes out before we arrive, through the end of 2026.",
+    wx_loading: "Loading Cambridge forecast…",
+    wx_err: "Could not load the forecast. Try again in a minute.",
+    wx_now_tag: "Now in Cambridge",
+    wx_year_h: "Time left in 2026",
+    wx_year_p: "Outdoor season through 31 December. After that this weekly report stops.",
+    wx_days: "days left",
+    wx_hours: "hours left",
+    wx_sats: "Saturdays left",
+    wx_session_h: "This Saturday's window",
+    wx_session_p: "Arrival window 09:15–11:15 (Play Tennis sample 09:15–10:00; weekend calendar 10:00–11:15). Be on court before the PIN window closes.",
+    wx_hours_h: "Hour by hour for the session",
+    wx_col_time: "Time",
+    wx_col_sky: "Sky",
+    wx_col_temp: "Temp",
+    wx_outlook_h: "7-day Cambridge outlook",
+    wx_call_go: "Play — dry enough for a rally",
+    wx_call_maybe: "Maybe — pack a layer and check the chat",
+    wx_call_stop: "Wet — confirm in WhatsApp before you travel",
+    wx_source: "Forecast: Open-Meteo (ECMWF). Courts are outdoors — a shower can still arrive.",
+    wx_wa: "Share this Saturday call on WhatsApp",
+    wx_foot: "Weekly Saturday 07:00 Europe/London reports through 31 Dec 2026.",
+    wx_rain: "Rain",
+    wx_wind: "Wind",
+    wx_pop: "Rain chance",
+    wx_sats_h: "Remaining Saturdays in 2026",
+    wx_kit_layers: "Layers and a dry bag for extras",
+    wx_kit_water: "Extra water — hard courts heat up",
+    wx_kit_rain: "Pack a jacket; courts stay slippery after a shower",
+    wx_kit_wind: "Expect swirl on the open Pieces courts",
+    wx_kit_fair: "Fair outdoor tennis weather — racket, balls, shoes, tea"
   }
 };
 
 T.tr = {
   nav_home: "🏠 Ana sayfa", nav_learn: "📚 Öğren", nav_courts: "📍 Kortlar", nav_book: "📱 Rezerve",
-  nav_players: "👥 Oyuncular", nav_calendar: "📅 Takvim", nav_shop: "🛒 Alışveriş", nav_park: "🅿️ Park", nav_kids: "🧒 Çocuklar", nav_enter: "🔐 Giriş", nav_receipt: "🧾 Makbuz",
+  nav_players: "👥 Oyuncular", nav_calendar: "📅 Takvim", nav_weather: "⛅ Hava", nav_shop: "🛒 Alışveriş", nav_park: "🅿️ Park", nav_kids: "🧒 Çocuklar", nav_enter: "🔐 Giriş", nav_receipt: "🧾 Makbuz",
   search_ph: "Sitede ara",
   skip: "İçeriğe geç", translate: "Çevir",
   repo_note: "💻 Bu site açık kaynak: <a href=\"https://github.com/rifaterdemsahin/tennis\">github.com/rifaterdemsahin/tennis</a>. Fork’la, bir sayfayı iyileştir, pull request gönder — topluluk davetlidir.",
@@ -590,7 +624,41 @@ T.tr = {
   s6_when: "Eylül’den itibaren",
   s6_court: "Jesus Green / St Ives / parklar dönüşümlü",
   s6_status: "Tekrarlayan",
-  s6_notes: "Sayı partneri Eylül’den sonra dönmek istiyor. Yeterli junior olunca çocuk kortu."
+  s6_notes: "Sayı partneri Eylül’den sonra dönmek istiyor. Yeterli junior olunca çocuk kortu.",
+
+  wx_eyebrow: "Cambridge · Christ's Pieces",
+  wx_h1: "Cumartesi hava ⛅",
+  wx_lede: "Christ's Pieces açık kortları için canlı tahmin. Cumartesi sabahı, sahaya varmadan önce rapor gider; 2026 sonuna kadar.",
+  wx_loading: "Cambridge tahmini yükleniyor…",
+  wx_err: "Tahmin yüklenemedi. Bir dakika sonra tekrar dene.",
+  wx_now_tag: "Cambridge şu an",
+  wx_year_h: "2026’dan kalan süre",
+  wx_year_p: "Açık hava sezonu 31 Aralık’a kadar. Sonrasında haftalık rapor durur.",
+  wx_days: "gün kaldı",
+  wx_hours: "saat kaldı",
+  wx_sats: "Cumartesi kaldı",
+  wx_session_h: "Bu Cumartesi penceresi",
+  wx_session_p: "Varış penceresi 09:15–11:15 (Play Tennis örneği 09:15–10:00; takvim 10:00–11:15). PIN kapanmadan kortta ol.",
+  wx_hours_h: "Seans saat saat",
+  wx_col_time: "Saat",
+  wx_col_sky: "Gökyüzü",
+  wx_col_temp: "Sıcaklık",
+  wx_outlook_h: "7 günlük Cambridge görünümü",
+  wx_call_go: "Oyna — rally için yeterince kuru",
+  wx_call_maybe: "Belki — katman al, sohbette teyit et",
+  wx_call_stop: "Islak — yola çıkmadan WhatsApp’ta teyit et",
+  wx_source: "Tahmin: Open-Meteo (ECMWF). Kortlar açık — ani yağmur gelebilir.",
+  wx_wa: "Bu Cumartesi çağrısını WhatsApp’ta paylaş",
+  wx_foot: "Haftalık Cumartesi 07:00 Europe/London raporları, 31 Ara 2026’ya kadar.",
+  wx_rain: "Yağmur",
+  wx_wind: "Rüzgar",
+  wx_pop: "Yağmur ihtimali",
+  wx_sats_h: "2026’da kalan Cumartesiler",
+  wx_kit_layers: "Katman ve yedekler için kuru çanta",
+  wx_kit_water: "Ekstra su — sert kort ısınır",
+  wx_kit_rain: "Ceket al; yağmur sonrası kort kaygan kalır",
+  wx_kit_wind: "Açık Pieces kortlarında rüzgar döner",
+  wx_kit_fair: "İyi açık hava tenisi — raket, top, ayakkabı, çay"
 };
 
 function copyFromEn(over) {
@@ -599,7 +667,7 @@ function copyFromEn(over) {
 
 T.es = copyFromEn({
   nav_home: "🏠 Inicio", nav_learn: "📚 Aprender", nav_courts: "📍 Pistas", nav_book: "📱 Reservar",
-  nav_players: "👥 Jugadores", nav_calendar: "📅 Calendario", nav_shop: "🛒 Comprar", nav_park: "🅿️ Parking", nav_kids: "🧒 Niños", nav_enter: "🔐 Entrada", nav_receipt: "🧾 Recibo", search_ph: "Buscar",
+  nav_players: "👥 Jugadores", nav_calendar: "📅 Calendario", nav_weather: "⛅ Tiempo", nav_shop: "🛒 Comprar", nav_park: "🅿️ Parking", nav_kids: "🧒 Niños", nav_enter: "🔐 Entrada", nav_receipt: "🧾 Recibo", search_ph: "Buscar",
   skip: "Saltar al contenido", translate: "Traducir",
   home_eyebrow: "Cambridge · bienvenidos principiantes",
   home_h1: "Golpea, ríe, aprende y luego el té. ☕",
@@ -742,12 +810,25 @@ T.es = copyFromEn({
   s5_notes: "El explorador vuelve a fin de mes. Buena semana para una pista con sombra.",
   s6_when: "Desde septiembre", s6_court: "Rotar Jesus Green / St Ives / parques",
   s6_status: "Recurrente",
-  s6_notes: "El compañero de marcador quiere volver en septiembre. Pista infantil si hay juniors."
+  s6_notes: "El compañero de marcador quiere volver en septiembre. Pista infantil si hay juniors.",
+  wx_h1: "Tiempo del sábado ⛅",
+  wx_lede: "Pronóstico en vivo para tenis al aire libre en Christ's Pieces. El informe sale el sábado por la mañana, antes de llegar, hasta fin de 2026.",
+  wx_year_h: "Tiempo que queda de 2026",
+  wx_days: "días restantes",
+  wx_hours: "horas restantes",
+  wx_sats: "sábados restantes",
+  wx_session_h: "Ventana de este sábado",
+  wx_call_go: "Jugar — suficientemente seco",
+  wx_call_maybe: "Quizá — lleva capa y confirma en el chat",
+  wx_call_stop: "Mojado — confirma en WhatsApp antes de ir",
+  wx_outlook_h: "Perspectiva de 7 días en Cambridge",
+  wx_wa: "Comparte la llamada del sábado en WhatsApp",
+  wx_sats_h: "Sábados que quedan en 2026"
 });
 
 T.de = copyFromEn({
   nav_home: "🏠 Start", nav_learn: "📚 Lernen", nav_courts: "📍 Plätze", nav_book: "📱 Buchen",
-  nav_players: "👥 Spieler", nav_calendar: "📅 Kalender", nav_shop: "🛒 Shop", nav_park: "🅿️ Parken", nav_kids: "🧒 Kinder", nav_enter: "🔐 Zugang", nav_receipt: "🧾 Beleg", search_ph: "Suche",
+  nav_players: "👥 Spieler", nav_calendar: "📅 Kalender", nav_weather: "⛅ Wetter", nav_shop: "🛒 Shop", nav_park: "🅿️ Parken", nav_kids: "🧒 Kinder", nav_enter: "🔐 Zugang", nav_receipt: "🧾 Beleg", search_ph: "Suche",
   skip: "Zum Inhalt", translate: "Übersetzen",
   home_eyebrow: "Cambridge · Anfänger willkommen",
   home_h1: "Schlagen, lachen, lernen, dann Tee. ☕",
@@ -890,12 +971,25 @@ T.de = copyFromEn({
   s5_notes: "Scout kommt gegen Monatsende zurück. Gute Woche für einen Schattenplatz.",
   s6_when: "Ab September", s6_court: "Jesus Green / St Ives / Parks rotieren",
   s6_status: "Wiederkehrend",
-  s6_notes: "Zählpartner will ab September wieder dabei sein. Kinderplatz, wenn genug Juniors da sind."
+  s6_notes: "Zählpartner will ab September wieder dabei sein. Kinderplatz, wenn genug Juniors da sind.",
+  wx_h1: "Samstagswetter ⛅",
+  wx_lede: "Live-Vorhersage fürs Freilufttennis in Christ's Pieces. Samstagmorgen vor der Ankunft, bis Ende 2026.",
+  wx_year_h: "Rest von 2026",
+  wx_days: "Tage übrig",
+  wx_hours: "Stunden übrig",
+  wx_sats: "Samstage übrig",
+  wx_session_h: "Fenster diesen Samstag",
+  wx_call_go: "Spielen — trocken genug",
+  wx_call_maybe: "Vielleicht — Lage einpacken, Chat prüfen",
+  wx_call_stop: "Nass — vor der Fahrt in WhatsApp bestätigen",
+  wx_outlook_h: "7-Tage-Ausblick Cambridge",
+  wx_wa: "Samstags-Call in WhatsApp teilen",
+  wx_sats_h: "Verbleibende Samstage 2026"
 });
 
 T.it = copyFromEn({
   nav_home: "🏠 Home", nav_learn: "📚 Impara", nav_courts: "📍 Campi", nav_book: "📱 Prenota",
-  nav_players: "👥 Giocatori", nav_calendar: "📅 Calendario", nav_shop: "🛒 Shop", nav_park: "🅿️ Parcheggio", nav_kids: "🧒 Bambini", nav_enter: "🔐 Ingresso", nav_receipt: "🧾 Ricevuta", search_ph: "Cerca",
+  nav_players: "👥 Giocatori", nav_calendar: "📅 Calendario", nav_weather: "⛅ Meteo", nav_shop: "🛒 Shop", nav_park: "🅿️ Parcheggio", nav_kids: "🧒 Bambini", nav_enter: "🔐 Ingresso", nav_receipt: "🧾 Ricevuta", search_ph: "Cerca",
   skip: "Vai al contenuto", translate: "Traduci",
   home_eyebrow: "Cambridge · principianti benvenuti",
   home_h1: "Colpisci, ridi, impara, poi il tè. ☕",
@@ -1038,12 +1132,25 @@ T.it = copyFromEn({
   s5_notes: "Lo scout torna a fine mese. Bella settimana per un campo all’ombra.",
   s6_when: "Da settembre", s6_court: "Ruotare Jesus Green / St Ives / parchi",
   s6_status: "Ricorrente",
-  s6_notes: "Il partner del punteggio vuole tornare da settembre. Campo bambini se ci sono abbastanza junior."
+  s6_notes: "Il partner del punteggio vuole tornare da settembre. Campo bambini se ci sono abbastanza junior.",
+  wx_h1: "Meteo del sabato ⛅",
+  wx_lede: "Previsione live per il tennis all’aperto a Christ's Pieces. Il report parte il sabato mattina prima dell’arrivo, fino a fine 2026.",
+  wx_year_h: "Tempo rimasto nel 2026",
+  wx_days: "giorni rimasti",
+  wx_hours: "ore rimaste",
+  wx_sats: "sabati rimasti",
+  wx_session_h: "Finestra di questo sabato",
+  wx_call_go: "Gioca — abbastanza asciutto",
+  wx_call_maybe: "Forse — porta uno strato e conferma in chat",
+  wx_call_stop: "Bagnato — conferma su WhatsApp prima di partire",
+  wx_outlook_h: "Previsione 7 giorni Cambridge",
+  wx_wa: "Condividi la chiamata del sabato su WhatsApp",
+  wx_sats_h: "Sabati restanti nel 2026"
 });
 
 T.zh = copyFromEn({
   nav_home: "🏠 首页", nav_learn: "📚 学习", nav_courts: "📍 球场", nav_book: "📱 预订",
-  nav_players: "👥 球友", nav_calendar: "📅 日历", nav_shop: "🛒 购物", nav_park: "🅿️ 停车", nav_kids: "🧒 孩子", nav_enter: "🔐 入场", nav_receipt: "🧾 收据", search_ph: "搜索本站",
+  nav_players: "👥 球友", nav_calendar: "📅 日历", nav_weather: "⛅ 天气", nav_shop: "🛒 购物", nav_park: "🅿️ 停车", nav_kids: "🧒 孩子", nav_enter: "🔐 入场", nav_receipt: "🧾 收据", search_ph: "搜索本站",
   skip: "跳到正文", translate: "翻译",
   home_eyebrow: "剑桥 · 欢迎初学者",
   home_h1: "打球、欢笑、学习，然后喝茶。☕",
@@ -1186,7 +1293,20 @@ T.zh = copyFromEn({
   s5_notes: "探路人月底回来。适合再订一片有树荫的场。",
   s6_when: "九月起", s6_court: "轮换 Jesus Green / St Ives / 公园",
   s6_status: "常规",
-  s6_notes: "记分搭档计划九月回归。青少年够人就开儿童场。"
+  s6_notes: "记分搭档计划九月回归。青少年够人就开儿童场。",
+  wx_h1: "周六天气 ⛅",
+  wx_lede: "Christ's Pieces 室外网球实时预报。周六早上、到场前发出，持续到 2026 年底。",
+  wx_year_h: "2026 年剩余时间",
+  wx_days: "天剩余",
+  wx_hours: "小时剩余",
+  wx_sats: "个周六剩余",
+  wx_session_h: "本周六时段",
+  wx_call_go: "可以打 — 够干",
+  wx_call_maybe: "再看 — 带件外套并在群里确认",
+  wx_call_stop: "会湿 — 出门前在 WhatsApp 确认",
+  wx_outlook_h: "剑桥 7 天展望",
+  wx_wa: "把周六天气发到 WhatsApp",
+  wx_sats_h: "2026 年剩余周六"
 });
 
 const I18N_KEY = "clt-lang";
@@ -1219,6 +1339,7 @@ function applyI18n(lang) {
   });
   applyPlaceholders(lang);
   if (typeof window.renderCalendar === "function") window.renderCalendar();
+  if (typeof window.renderWeather === "function") window.renderWeather();
 }
 
 function mountRepoFooter() {
@@ -1283,7 +1404,8 @@ const SITE_PAGES = [
   { href: "kids.html", title: "Kids", keys: "children watch practice balls talk" },
   { href: "shop.html", title: "Shop", keys: "amazon racket balls shoes" },
   { href: "players.html", title: "Players", keys: "roles erdem saturday" },
-  { href: "calendar.html", title: "Calendar", keys: "saturday weekday joker" }
+  { href: "calendar.html", title: "Calendar", keys: "saturday weekday joker" },
+  { href: "weather.html", title: "Weather", keys: "weather cambridge forecast rain wind saturday christ's pieces remaining year" }
 ];
 
 function wireSearch(wrap) {
@@ -1292,7 +1414,7 @@ function wireSearch(wrap) {
   const render = () => {
     const q = input.value.trim().toLowerCase();
     const lang = document.documentElement.lang || "en";
-    const navKey = { "index.html": "nav_home", "enter.html": "nav_enter", "receipt.html": "nav_receipt", "learn.html": "nav_learn", "courts.html": "nav_courts", "book.html": "nav_book", "parking.html": "nav_park", "kids.html": "nav_kids", "shop.html": "nav_shop", "players.html": "nav_players", "calendar.html": "nav_calendar" };
+    const navKey = { "index.html": "nav_home", "enter.html": "nav_enter", "receipt.html": "nav_receipt", "learn.html": "nav_learn", "courts.html": "nav_courts", "book.html": "nav_book", "parking.html": "nav_park", "kids.html": "nav_kids", "shop.html": "nav_shop", "players.html": "nav_players", "calendar.html": "nav_calendar", "weather.html": "nav_weather" };
     const list = SITE_PAGES.filter((p) => {
       if (!q) return true;
       const label = (T[lang] && T[lang][navKey[p.href]]) || p.title;

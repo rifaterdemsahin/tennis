@@ -11,6 +11,8 @@ Languages (top bar, remembered in the browser): English, Türkçe, Español, Deu
 Informal coordination: courts, roles, and a Saturday-first calendar.  
 It is **not** a club. Contribute: [fork the repo](https://github.com/rifaterdemsahin/tennis) and send a pull request.
 
+A live Open-Meteo forecast for Christ's Pieces lives on `weather.html`. Saturday 07:00 Europe/London reports (through 31 Dec 2026) go to the organiser inbox with a WhatsApp paste — member emails stay out of this public repo.
+
 ## Pages
 
 | Page | Purpose |
@@ -25,6 +27,7 @@ It is **not** a club. Contribute: [fork the repo](https://github.com/rifaterdems
 | `book.html` | Play Tennis app walkthrough — £3 / 45 min, Saturdays on Erdem |
 | `players.html` | Roles (Erdem named only as Saturday payer) |
 | `calendar.html` | Coordination calendar |
+| `weather.html` | Cambridge forecast, year remaining, Saturday play call |
 
 ## Privacy
 

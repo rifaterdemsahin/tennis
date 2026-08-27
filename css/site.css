@@ -364,3 +364,36 @@ footer .repo-note {
 @media print {
   .step { break-inside: avoid; box-shadow: none; }
 }
+
+.wx-stats { margin: 1.4rem 0 1.6rem; }
+.wx-big {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.7rem;
+  margin: 0.35rem 0 0.2rem;
+  letter-spacing: -0.03em;
+}
+.wx-now {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+}
+.wx-call {
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  margin: 0.35rem 0 0;
+}
+.wx-go { background: #d7efe0; color: #14532d; }
+.wx-maybe { background: #fff3d6; color: #7a4b00; }
+.wx-stop { background: #f8d4d0; color: #7f1d1d; }
+.wx-sat-list {
+  columns: 2;
+  gap: 1.2rem;
+  padding-left: 1.2rem;
+}
+@media (max-width: 700px) {
+  .wx-sat-list { columns: 1; }
+}

@@ -1,0 +1,16 @@
+{
+  "place": "Cambridge, United Kingdom",
+  "court": "Christ's Pieces Public Tennis Court",
+  "latitude": 52.2053,
+  "longitude": 0.1218,
+  "timezone": "Europe/London",
+  "season_end": "2026-12-31",
+  "session": {
+    "weekday": "Saturday",
+    "window_start": "09:15",
+    "window_end": "11:15",
+    "note": "Play Tennis sample slot is 09:15–10:00. Calendar weekend block is 10:00–11:15. Report covers the full arrival window."
+  },
+  "source": "Open-Meteo (ECMWF)",
+  "source_url": "https://open-meteo.com/"
+}
